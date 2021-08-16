@@ -72,7 +72,7 @@ app.get("/logout", async (req, res) => {
   res
     .cookie("user", "guest", {
       httpOnly: true,
-      maxAge: Date.now() + 2.628e6,
+      maxAge: Date.now() - 2.628e6,
       secure: true,
     })
     .redirect("/login");
@@ -85,7 +85,7 @@ app.get("/", (req, res) => {
   res.render("home", { title: "Home page:- Occupied in covid" });
 });
 app.get("/chat", async (req, res) => {
-  const usr = await User.findOne({ _id: req.cookies.user });
+  const usr = await User.findOne({ _id: req.cookies.user }).catch(e=>res.redirect("/login"));
   if (usr) {
     if (usr.username) {
       res.sendFile(__dirname + "/build/chat.html");

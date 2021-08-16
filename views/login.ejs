@@ -2,13 +2,14 @@
     <% if(!get){%>
         <span class="alert alert-danger" role="alert"><%= error %></span>
     <% }%>
-  <form method="POST" action="/login">
     <center>
+    <h1>Login <i class="fa fa-user"></i></h1>
+  <form method="POST" action="/login">
     <span><label for="name" style="margin-top:30px;">UserName:</label><input type="text" style="height:30px;" id="name" name="username" ></span>
     <label for="password" style="margin-top: 30px;">Password: </label><input type="password" style="height:30px" id="password" name="password"/>
     <br />
     <button type="submit" class="btn btn-success">Login</button> or
     <a href="/signup"><button class="btn btn-primary">Signup instead</button></a>
-    </center>
   </form>
+  </center>
 </div>

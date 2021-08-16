@@ -3,11 +3,11 @@
         <center>
             <% if(errors){ %>
                 <% if(errors.length===0){ %>
-                User successfully created
+                <div class="alert alert-success">User successfully created</div>
                 <% } %>
             <% if(errors.length>0){ %>
                 <% errors.forEach(function(e){%>
-                   <div> <%= e %></div>
+                   <div class="alert alert-danger"> <%= e %></div>
                 <% }) %>
             <% }%>
             <% } %>
