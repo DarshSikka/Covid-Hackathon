@@ -1,0 +1,24 @@
+<div>
+    <div class="card card-body">
+        <center>
+            <% if(errors){ %>
+                <% if(errors.length===0){ %>
+                User successfully created
+                <% } %>
+            <% if(errors.length>0){ %>
+                <% errors.forEach(function(e){%>
+                   <div> <%= e %></div>
+                <% }) %>
+            <% }%>
+            <% } %>
+        <h1 style="margin-top:30px"class="text-center"><i class="fa fa-user"></i>Register<i class="fa fa-comment"></i></h1>
+    <form method="POST" action="/signup">
+       <span><label for="name" style="margin-top:30px;">UserName:</label><input style="height:30px;" id="name" name="username" ></span>
+    <span><label style="margin-top:30px;"for="password">Password:</label><input style="height:30px"type="password" name="password" id="password"></span>
+    <span><label style="margin-top:30px;" for="confirm">Confirm Password</label><input type="password"style="height:30px"name="confirm" id="confirm"></span>
+    <br>
+    <input style="height:50px;background-color:wheat;margin-top:30px;width:100px;"type="submit" value="Register">
+    <br><a href="/login">Login Instead</a>
+        </center></form>
+    </div>
+    </div>

@@ -1,0 +1,31 @@
+.heading {
+  text-align: center;
+  color: grey;
+}
+.homepage {
+  display: flex;
+  justify-content: center;
+  height: 50vw;
+  align-items: center;
+  width: 100vw;
+}
+body {
+  background: darkblue;
+}
+.vid {
+  position: fixed;
+  top: 5rem;
+  left: 18vw;
+  z-index: 1;
+}
+.download-div {
+  height: 600px;
+}
+.download {
+  z-index: 2;
+  margin-top: 15rem;
+}
+body,
+.card {
+  background-color: lightgoldenrodyellow;
+}
